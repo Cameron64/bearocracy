@@ -37,11 +37,8 @@
                 $scope.hideBanner = false;
                 $scope.numBanners = 18;
 //              TODO:  dynamically figure out numbBanners
-
-
                 $scope.pick = function() {
                     $scope.imgNum = Math.floor(Math.random() * $scope.numBanners) + 1;
-
                     $scope.banner = "img/banners/bearbanner" + $scope.imgNum + ".jpg"
 
                 };
