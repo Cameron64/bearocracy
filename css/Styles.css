@@ -29,8 +29,12 @@ float:left;
 }
 
 td tr table {
-    border-color: white;
+
     padding:0;
+}
+td{
+    border: 1px solid #1561b6;
+    z-index:100;
 }
 .toggle{
     margin:2px;
