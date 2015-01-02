@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/Styles.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="JS/magic.js"></script>
+    <script src="JS/slideshow.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Bearocracy</title>
+</head>
+<body>
+<table ng-app="stream">
+
+    <tr>
+        <td  colspan="2">
+            <div class="header">
+            <div class="buttons">
+                <img class="toggle" ng-src="img/hbhead.png"
+                     ng-click="hideBanner={true : false , false : true}[hideBanner];"/> <br>
+                <img class="toggle" ng-src="img/stream.png"
+                     ng-click="hideStream={true : false , false : true}[hideStream];"/>
+                <img ng-src="img/chat.png" ng-controller="MainController" ng-click="change();"/>
+
+            </div>
+
+            <slideshow></slideshow>
+
+            </div>
+    </tr>
+    <tr>
+        <td id="streamBox">
+            <streamload></streamload>
+        </td>
+        <td rowspan="2">
+            <div ng-controller="SubController" ng-hide="check()">
+<!--chat-->
+                <script id="cid0020000078381685296" data-cfasync="false" async
+                        src="http://st.chatango.com/js/gz/emb.js" style="width:100%; height:500px;">{
+                    "handle"
+                :
+                    "bearocracy", "styles"
+                :
+                    {
+                        "a"
+                    :
+                        "000000", "b"
+                    :
+                        100, "c"
+                    :
+                        "808080", "d"
+                    :
+                        "808080", "e"
+                    :
+                        "000000", "g"
+                    :
+                        "bbbbbb", "h"
+                    :
+                        "202020", "i"
+                    :
+                        61, "k"
+                    :
+                        "a0a0a0", "p"
+                    :
+                        "12.69", "q"
+                    :
+                        "000000", "r"
+                    :
+                        100, "t"
+                    :
+                        0, "sbc"
+                    :
+                        "252525", "v"
+                    :
+                        0
+                    }
+                }</script>
+                <!--end chat-->
+            </div>
+        </td>
+    </tr>
+
+
+</table>
+</body>
+</html>

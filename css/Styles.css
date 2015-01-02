@@ -1,0 +1,40 @@
+body, html{
+    background-color: black;
+height:100%;
+    width:100%;
+}
+table{
+    position:absolute;
+    width:80%;
+    left:10%;
+}
+
+.buttons {
+float:left;
+}
+
+.banners{
+    top:0;
+}
+
+.stream {
+    position: relative;
+
+}
+
+.chat {
+    position: relative;
+
+}
+
+td tr table {
+    border-color: white;
+}
+.toggle{
+    margin:2px;
+}
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
