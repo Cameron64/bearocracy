@@ -18,17 +18,6 @@
         };
     });
 
-
-    app.directive('chat', function () {
-        return{
-            restrict: 'E',
-            templateUrl: 'chatloader.html',
-            controller: function ($scope) {
-
-
-            }
-        };
-    });
     app.directive('mainbanner', function () {
         return{
             restrict: 'E',
