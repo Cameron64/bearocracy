@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/Styles.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="JS/magic.js"></script>
 
 
@@ -14,74 +12,35 @@
 <body>
 <table ng-app="stream">
 
-    <tr  ng-show="hideBanner">
+    <tr ng-show="hideBanner">
         <th colspan="2">
-            <div class="subToggles" ng-click="hideStream={true : false , false : true}[hideStream];">-Video&nbsp; </div>
-            <div class="subToggles" ng-click="hideBanner={true : false , false : true}[hideBanner];"> -Header&nbsp; </div>
-            <div class="subToggles" ng-controller="MainController" ng-click="change();"> -Chat</div>
+            <sub-toggles></sub-toggles>
         </th>
-        <th  style="width:30%;"></th>
+        <th style="width:30%;"></th>
 
     </tr>
 
-    <tr  ng-hide="hideBanner" >
-        <th colspan="2" style="border-right:none;border-left: 1px solid #1561b6;">
-            <maintoggles></maintoggles>
+    <tr ng-hide="hideBanner">
+        <th colspan="2" class="headerLeft">
+            <div class="headerContent">
+            <main-toggles></main-toggles>
 
             <mainbanner></mainbanner>
-
+            
+            </div>
         </th>
         <th></th>
-        <!--adds top right border-->
-        <td style="border-left:none;"> </td>
+        <td class="headerRight"></td>
     </tr>
     <tr>
         <td id="streamBox" colspan="2" rowspan="2" ng-hide="hideStream" style="padding:1px;">
             <streamload></streamload>
         </td>
         <td rowspan="2" ng-controller="SubController" ng-hide="check()" style="min-width:300px;">
-            <div  style=" height:100%;">
-<!--chat-->
+            <div style=" height:100%;">
+                <!--chat-->
                 <script id="cid0020000078381685296" data-cfasync="false" async
-                        src="http://st.chatango.com/js/gz/emb.js" style="width:100%; height:100%;">{
-                    "handle"
-                :
-                    "bearocracy", "styles"
-                :
-                    {
-                        "a"
-                    :
-                        "000000", "b"
-                    :
-                        100, "c"
-                    :
-                        "808080", "d"
-                    :
-                        "808080", "e"
-                    :
-                        "000000", "g"
-                    :
-                        "bbbbbb", "h"
-                    :
-                        "202020", "i"
-                    :
-                        61, "k"
-                    :
-                        "a0a0a0", "p"
-                    :
-                        "12.69", "q"
-                    :
-                        "000000", "r"
-                    :
-                        100, "t"
-                    :
-                        0, "sbc"
-                    :
-                        "252525", "v"
-                    :
-                        0
-                    }
-                }</script>
+                        src="http://st.chatango.com/js/gz/emb.js" style="width:100%; height:100%;">{"handle":"bearocracy","styles":{"a":"000000","b":100,"c":"808080","d":"808080","e":"000000","g":"bbbbbb","h":"202020","i":61,"k":"a0a0a0","p":"12.69","q":"000000","r":100,"t":0,"sbc":"252525","v":0}}</script>
                 <!--end chat-->
             </div>
         </td>

@@ -1,22 +1,23 @@
-body, html{
+body, html {
     background-color: black;
 
 }
-table{
-    position:absolute;
-    width:80%;
-    left:10%;
-    height:90%;
+
+table {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 90%;
 }
 
 .buttons {
-float:left;
+    float: left;
 }
 
-.banners{
-    top:0;
-    float:left;
-    max-width:60%;
+.banners {
+    top: 0;
+    float: left;
+    max-width: 60%;
 }
 
 .stream {
@@ -30,20 +31,35 @@ float:left;
 }
 
 td tr table {
-margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-td{
+
+td {
     border: 1px solid #1561b6;
-    z-index:100;
+    z-index: 100;
 }
-.toggle{
-    margin:2px;
+
+.toggle {
+    margin: 2px;
     cursor: pointer;
 }
-.subToggles{
-float:left;
-    color:#1561b6;
+
+.subToggles {
+    float: left;
+    color: #1561b6;
     cursor: pointer;
 
+}
+
+.headerLeft {
+    border-right: none;
+    border-left: 1px solid #1561b6;
+}
+
+.headerRight {
+    border-left: none;
+}
+.headerContent{
+    float:right;
 }

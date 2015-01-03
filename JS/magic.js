@@ -48,11 +48,18 @@
     });
 
 
-    app.directive('maintoggles', function(){
+    app.directive('mainToggles', function(){
        return{
            restrict: 'E',
-           templateUrl: 'maintoggles.html'
+           templateUrl: 'mainToggles.html'
        }
+    });
+
+    app.directive('subToggles', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'subToggles.html'
+        }
     });
 
     app.factory('sharedService', function () {
