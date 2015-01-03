@@ -25,17 +25,10 @@
     </tr>
 
     <tr  ng-hide="hideBanner" >
-        <th colspan="2" style="border-right:none;">
-            <div class="buttons">
-                <img class="toggle" ng-src="img/hbhead.png"
-                     ng-click="hideBanner={true : false , false : true}[hideBanner];"/> <br>
-                <img class="toggle" ng-src="img/stream.png"
-                     ng-click="hideStream={true : false , false : true}[hideStream];"/>
-                <img class="toggle" ng-src="img/chat.png" ng-controller="MainController" ng-click="change();"/>
+        <th colspan="2" style="border-right:none;border-left: 1px solid #1561b6;">
+            <maintoggles></maintoggles>
 
-            </div>
-
-            <slideshow></slideshow>
+            <mainbanner></mainbanner>
 
         </th>
         <th></th>

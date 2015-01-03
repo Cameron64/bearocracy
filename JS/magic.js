@@ -29,7 +29,7 @@
             }
         };
     });
-    app.directive('slideshow', function () {
+    app.directive('mainbanner', function () {
         return{
             restrict: 'E',
             templateUrl: 'slideshow.html',
@@ -37,7 +37,7 @@
                 $scope.hideBanner = false;
                 $scope.numBanners = 18;
 //              TODO:  dynamically figure out numbBanners
-                $scope.pick = function() {
+                $scope.pick = function () {
                     $scope.imgNum = Math.floor(Math.random() * $scope.numBanners) + 1;
                     $scope.banner = "img/banners/bearbanner" + $scope.imgNum + ".jpg"
 
@@ -47,6 +47,13 @@
         };
     });
 
+
+    app.directive('maintoggles', function(){
+       return{
+           restrict: 'E',
+           templateUrl: 'maintoggles.html'
+       }
+    });
 
     app.factory('sharedService', function () {
         var shared = {};
@@ -84,11 +91,11 @@
 
     }]);
 
-    app.directive('iframeSetDimentionsOnload', [function(){
+    app.directive('iframeSetDimentionsOnload', [function () {
         return {
             restrict: 'A',
-            link: function($scope, element, attrs){
-                element.on('load', function(){
+            link: function ($scope, element, attrs) {
+                element.on('load', function () {
                     $scope.StreamBoxHeight = document.getElementById("streamBox").offsetHeight;
                     console.log($scope.StreamBoxHeight);
                     var iFrameHeight = $scope.StreamBoxHeight + 'px';
@@ -98,39 +105,8 @@
                 })
 
             }
-        }}]);
+        }
+    }]);
 
 
 })();
-
-
-/*
-
-link: function(scope, element, attrs, $scope){
-
-
-
-    element.on('load', function(){
-        $scope.StreamBoxHeight = document.getElementById("streamBox").scrollHeight;
-        console.log($scope.StreamBoxHeight);
-        */
-/*$scope.iFrameHeight = $scope.StreamBoxHeight + 'px';
-         $scope.iFrameWidth = '100%';
-
-         console.log($scope.StreamBoxHeight);
-
-         element.css('width', $scope.iFrameWidth);
-         element.css('height', $scope.iFrameHeight);*//*
-
-
-    });
-    */
-/*$scope.ResizeStreamBox = function(){
-     element.css('width', $scope.iFrameWidth);
-     element.css('height', $scope.iFrameHeight);
-     console.log($scope.StreamBoxHeight);
-
-     }*//*
-
-
-}*/
