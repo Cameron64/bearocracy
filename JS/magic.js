@@ -89,8 +89,6 @@
             restrict: 'A',
             link: function($scope, element, attrs){
                 element.on('load', function(){
-                    /* Set the dimensions here,
-                     I think that you were trying to do something like this: */
                     $scope.StreamBoxHeight = document.getElementById("streamBox").offsetHeight;
                     console.log($scope.StreamBoxHeight);
                     var iFrameHeight = $scope.StreamBoxHeight + 'px';

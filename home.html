@@ -15,15 +15,17 @@
 <table ng-app="stream">
 
     <tr  ng-show="hideBanner">
-        <td colspan="3">
+        <th colspan="2">
             <div class="subToggles" ng-click="hideStream={true : false , false : true}[hideStream];">-Video&nbsp; </div>
             <div class="subToggles" ng-click="hideBanner={true : false , false : true}[hideBanner];"> -Header&nbsp; </div>
             <div class="subToggles" ng-controller="MainController" ng-click="change();"> -Chat</div>
-        </td>
+        </th>
+        <th  style="width:30%;"></th>
+
     </tr>
 
     <tr  ng-hide="hideBanner" >
-        <td colspan="2" style="border-right:none;">
+        <th colspan="2" style="border-right:none;">
             <div class="buttons">
                 <img class="toggle" ng-src="img/hbhead.png"
                      ng-click="hideBanner={true : false , false : true}[hideBanner];"/> <br>
@@ -35,7 +37,8 @@
 
             <slideshow></slideshow>
 
-        </td>
+        </th>
+        <th></th>
         <!--adds top right border-->
         <td style="border-left:none;"> </td>
     </tr>
