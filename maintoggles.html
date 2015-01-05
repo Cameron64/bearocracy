@@ -1,8 +1,8 @@
 <div class="buttons">
     <img class="toggle" ng-src="img/hbhead.png"
          ng-click="hideBanner={true : false , false : true}[hideBanner];"/> <br>
-    <img class="toggle" ng-src="img/stream.png"
-         ng-click="hideStream={true : false , false : true}[hideStream];"/>
+    <img class="toggle" ng-src="img/stream.png" ng-controller="StreamController" style="z-index:9004;"
+         ng-click="change();"/>
     <img class="toggle" ng-src="img/chat.png" ng-controller="MainController" ng-click="change();"/>
 
 </div>

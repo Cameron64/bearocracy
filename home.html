@@ -40,8 +40,8 @@
         <td class="headerRight"></td>
     </tr>
     <tr>
-        <td id="streamBox" colspan="2" rowspan="2" ng-hide="hideStream" style="padding:1px;"  >
-            <div id="livestreamPlayer"></div>
+        <td id="streamBox" ng-controller="StreamSubController" colspan="2" rowspan="2" ng-hide="check()" style="padding:1px;"  >
+            <div  id="livestreamPlayer"></div>
         </td>
         <td rowspan="2" ng-controller="SubController" ng-hide="check()" style="min-width:300px;">
             <div style=" height:100%;">
