@@ -6,7 +6,7 @@
     var app = angular.module('stream', []);
 
 
-    app.directive('streamload', function () {
+    /*app.directive('streamload', function () {
         return{
             restrict: 'E',
             templateUrl: 'streamloader.html',
@@ -16,7 +16,7 @@
             }
 
         };
-    });
+    });*/
 
     app.directive('mainbanner', function () {
         return{
@@ -54,6 +54,7 @@
     app.factory('sharedService', function () {
         var shared = {};
         shared.sharingMessage = false;
+        shared.sharingMessage2 = false;
 
         return shared;
     });
@@ -75,6 +76,33 @@
         }
 
     }]);
+    app.controller('StreamController', ['$scope', 'sharedService', function ($scope, sharedService) {
+        $scope.hideStream = false;
+
+        $scope.sharedService = sharedService;
+
+
+        $scope.change = function () {
+
+            //set hide opposite
+            $scope.hideStream = !$scope.hideStream;
+
+            //share to service
+            sharedService.sharingMessage2 = $scope.hideStream;
+        }
+
+    }]);
+
+    app.controller('StreamSubController', ['$scope', 'sharedService', function ($scope, sharedService) {
+
+        $scope.check = function() {
+            $scope.sharedService = sharedService;
+            $scope.hideStream = $scope.sharedService.sharingMessage2;
+            return($scope.hideStream);
+        };
+
+
+    }]);
 
     app.controller('SubController', ['$scope', 'sharedService', function ($scope, sharedService) {
 
@@ -87,7 +115,7 @@
 
     }]);
 
-    app.directive('iframeSetDimentionsOnload', [function () {
+   /* app.directive('iframeSetDimentionsOnload', [function () {
         return {
             restrict: 'A',
             link: function ($scope, element, attrs) {
@@ -102,7 +130,7 @@
 
             }
         }
-    }]);
+    }]);*/
 
 
 })();
