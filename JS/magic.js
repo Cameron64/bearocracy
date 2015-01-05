@@ -5,19 +5,6 @@
 
     var app = angular.module('stream', []);
 
-
-    /*app.directive('streamload', function () {
-        return{
-            restrict: 'E',
-            templateUrl: 'streamloader.html',
-            controller: function ($scope) {
-
-                $scope.hideStream = false;
-            }
-
-        };
-    });*/
-
     app.directive('mainbanner', function () {
         return{
             restrict: 'E',
@@ -76,6 +63,18 @@
         }
 
     }]);
+
+    app.controller('SubController', ['$scope', 'sharedService', function ($scope, sharedService) {
+
+
+        $scope.check = function () {
+            $scope.sharedService = sharedService;
+            $scope.hideChat = $scope.sharedService.sharingMessage;
+            return($scope.hideChat);
+        };
+
+    }]);
+
     app.controller('StreamController', ['$scope', 'sharedService', function ($scope, sharedService) {
         $scope.hideStream = false;
 
@@ -104,16 +103,19 @@
 
     }]);
 
-    app.controller('SubController', ['$scope', 'sharedService', function ($scope, sharedService) {
 
 
-        $scope.check = function () {
-            $scope.sharedService = sharedService;
-            $scope.hideChat = $scope.sharedService.sharingMessage;
-            return($scope.hideChat);
-        };
+    /*app.directive('streamload', function () {
+     return{
+     restrict: 'E',
+     templateUrl: 'streamloader.html',
+     controller: function ($scope) {
 
-    }]);
+     $scope.hideStream = false;
+     }
+
+     };
+     });*/
 
    /* app.directive('iframeSetDimentionsOnload', [function () {
         return {
