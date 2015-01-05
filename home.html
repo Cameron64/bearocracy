@@ -4,6 +4,13 @@
     <link rel="stylesheet" href="css/Styles.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
     <script src="JS/magic.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript">
+        flashvars = { channel: 'bearocrats' };
+        params = { AllowScriptAccess: 'always' };
+        swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v20/playerapi.swf",
+                "livestreamPlayer", "100%", "99%", "9.0.0", "expressInstall.swf", flashvars, params);
+    </script>
 
 
     <meta charset="UTF-8">
@@ -33,8 +40,8 @@
         <td class="headerRight"></td>
     </tr>
     <tr>
-        <td id="streamBox" colspan="2" rowspan="2" ng-hide="hideStream" style="padding:1px;">
-            <streamload></streamload>
+        <td id="streamBox" colspan="2" rowspan="2" ng-hide="hideStream" style="padding:1px;"  >
+            <div id="livestreamPlayer"></div>
         </td>
         <td rowspan="2" ng-controller="SubController" ng-hide="check()" style="min-width:300px;">
             <div style=" height:100%;">

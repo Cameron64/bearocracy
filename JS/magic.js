@@ -37,14 +37,14 @@
     });
 
 
-    app.directive('mainToggles', function(){
-       return{
-           restrict: 'E',
-           templateUrl: 'mainToggles.html'
-       }
+    app.directive('mainToggles', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'mainToggles.html'
+        }
     });
 
-    app.directive('subToggles', function(){
+    app.directive('subToggles', function () {
         return{
             restrict: 'E',
             templateUrl: 'subToggles.html'

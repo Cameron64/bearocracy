@@ -60,6 +60,7 @@ td {
 .headerRight {
     border-left: none;
 }
-.headerContent{
-    float:right;
+
+.headerContent {
+    float: right;
 }
