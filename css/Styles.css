@@ -58,7 +58,14 @@ td {
 }
 
 .headerRight {
-    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:none;
+
+}
+th{
+    border-top: 1px solid #1561b6;
+    z-index: 100;
 }
 
 .headerContent {
