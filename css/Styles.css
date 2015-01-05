@@ -1,13 +1,12 @@
 body, html {
-    background-color: black;
-
+    background-color: #111111;
 }
 
 table {
     position: absolute;
     width: 80%;
     left: 10%;
-    height: 90%;
+    height: 80%;
 }
 
 .buttons {
