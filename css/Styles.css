@@ -1,18 +1,22 @@
 body, html {
     background-color: #111111;
 
+
 }
 body{
-    min-height:80%;
+
 }
 table {
     position: absolute;
     width: 80%;
     left: 10%;
+    top:0;
 }
 
 .ng-scope{
-    height:95%;
+
+    top:0;
+    height:89%;
 }
 .buttons {
     float: left;
@@ -21,7 +25,6 @@ table {
 .banners {
     top: 0;
     float: left;
-    max-width: 40%;
 }
 
 .stream {
@@ -58,6 +61,7 @@ td {
 .headerLeft {
     border-right: none;
     border-left: 1px solid #1561b6;
+    height:50px;
 }
 
 .headerRight {
