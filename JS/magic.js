@@ -5,6 +5,26 @@
 
     var app = angular.module('stream', []);
 
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+
+
+
     app.directive('mainbanner', function () {
         return{
             restrict: 'E',
@@ -23,7 +43,6 @@
         };
     });
 
-
     app.directive('mainToggles', function () {
         return{
             restrict: 'E',
@@ -40,8 +59,8 @@
 
     app.factory('sharedService', function () {
         var shared = {};
-        shared.sharingMessage = false;
-        shared.sharingMessage2 = false;
+        shared.isChatHidden = false;
+        shared.isStreamHidden = false;
 
         return shared;
     });
@@ -59,7 +78,7 @@
             $scope.hideChat = !$scope.hideChat;
 
             //share to service
-            sharedService.sharingMessage = $scope.hideChat;
+            sharedService.isChatHidden = $scope.hideChat;
         }
 
     }]);
@@ -69,7 +88,7 @@
 
         $scope.check = function () {
             $scope.sharedService = sharedService;
-            $scope.hideChat = $scope.sharedService.sharingMessage;
+            $scope.hideChat = $scope.sharedService.isChatHidden;
             return($scope.hideChat);
         };
 
@@ -87,7 +106,7 @@
             $scope.hideStream = !$scope.hideStream;
 
             //share to service
-            sharedService.sharingMessage2 = $scope.hideStream;
+            sharedService.isStreamHidden = $scope.hideStream;
         }
 
     }]);
@@ -96,42 +115,17 @@
 
         $scope.check = function() {
             $scope.sharedService = sharedService;
-            $scope.hideStream = $scope.sharedService.sharingMessage2;
+            $scope.hideStream = $scope.sharedService.isStreamHidden;
             return($scope.hideStream);
         };
 
 
     }]);
 
-
+    if(getCookie("bearocracy")){
+        $scope.hideBanner = true;
+    }else{
+        console.log(this.hideBanner);
+        console.log("made it");
+    }
 })();
-
-
-/*app.directive('streamload', function () {
- return{
- restrict: 'E',
- templateUrl: 'streamloader.html',
- controller: function ($scope) {
-
- $scope.hideStream = false;
- }
-
- };
- });*/
-
-/* app.directive('iframeSetDimentionsOnload', [function () {
- return {
- restrict: 'A',
- link: function ($scope, element, attrs) {
- element.on('load', function () {
- $scope.StreamBoxHeight = document.getElementById("streamBox").offsetHeight;
- console.log($scope.StreamBoxHeight);
- var iFrameHeight = $scope.StreamBoxHeight + 'px';
- var iFrameWidth = '100%';
- element.css('width', iFrameWidth);
- element.css('height', iFrameHeight);
- })
-
- }
- }
- }]);*/
