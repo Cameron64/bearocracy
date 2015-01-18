@@ -1,3 +1,3 @@
-<div class="subToggles" id="streamToggle2" ng-controller="StreamController" ng-click="change()">-Video&nbsp; </div>
-<div class="subToggles" ng-click="hideBanner={true : false , false : true}[hideBanner];"> -Header&nbsp; </div>
-<div class="subToggles" ng-controller="MainController" ng-click="change();"> -Chat</div>
+<div class="subToggles" id="streamToggle2" ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];">-Video&nbsp; </div>
+<div class="subToggles" ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"> -Header&nbsp; </div>
+<div class="subToggles"  ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"> -Chat</div>

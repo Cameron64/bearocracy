@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="css/Styles.css"/>
 
     <script src="JS/angular.min.js"></script>
+    <script src="JS/ngStorage.min.js"></script>
     <script src="JS/magic.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
     <script type="text/javascript">
@@ -17,16 +18,16 @@
 </head>
 <body>
 
-<table ng-app="stream" cellpadding="0" cellspacing="0">
+<table ng-app="stream" cellpadding="0" cellspacing="0" ng-controller="StreamSubController">
 
-    <tr ng-show="hideBanner" >
+    <tr ng-show="$storage.banner" >
         <td colspan="2" style="height:3%;">
             <sub-toggles></sub-toggles>
         </td>
 
     </tr>
 
-    <tr ng-hide="hideBanner">
+    <tr ng-hide="$storage.banner">
         <td colspan="2" style="height:5%;">
             <div style=" width:704px;height:120px; margin: 0 auto;">
             <main-toggles></main-toggles>
@@ -37,12 +38,12 @@
 
     </tr>
     <tr>
-        <td id="streamBox" ng-controller="StreamSubController"   ng-hide="check()" style="padding:1px;width:66%;"  >
+        <td id="streamBox" ng-controller="StreamSubController"   ng-hide="$storage.stream" style="padding:1px;width:66%;"  >
 
             <div  id="livestreamPlayer"></div>
 
         </td>
-        <td rowspan="2" ng-controller="SubController" ng-hide="check()" style="width:33%;">
+        <td rowspan="2" ng-controller="StreamSubController" ng-hide="$storage.chat" style="width:33%;">
                 <!--chat-->
                 <script id="cid0020000078381685296" data-cfasync="false" async
                         src="http://st.chatango.com/js/gz/emb.js" style="width:100%; height:95%;min-height:290px;top:0;" >{"handle":"bearocracy","styles":{"a":"000000","b":100,"c":"808080","d":"808080","e":"000000","g":"bbbbbb","h":"202020","i":61,"k":"a0a0a0","p":"12.69","q":"000000","r":100,"t":0,"sbc":"252525","v":0}}</script>
