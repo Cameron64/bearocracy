@@ -104,35 +104,34 @@
     }]);
 
 
-
-    /*app.directive('streamload', function () {
-     return{
-     restrict: 'E',
-     templateUrl: 'streamloader.html',
-     controller: function ($scope) {
-
-     $scope.hideStream = false;
-     }
-
-     };
-     });*/
-
-   /* app.directive('iframeSetDimentionsOnload', [function () {
-        return {
-            restrict: 'A',
-            link: function ($scope, element, attrs) {
-                element.on('load', function () {
-                    $scope.StreamBoxHeight = document.getElementById("streamBox").offsetHeight;
-                    console.log($scope.StreamBoxHeight);
-                    var iFrameHeight = $scope.StreamBoxHeight + 'px';
-                    var iFrameWidth = '100%';
-                    element.css('width', iFrameWidth);
-                    element.css('height', iFrameHeight);
-                })
-
-            }
-        }
-    }]);*/
-
-
 })();
+
+
+/*app.directive('streamload', function () {
+ return{
+ restrict: 'E',
+ templateUrl: 'streamloader.html',
+ controller: function ($scope) {
+
+ $scope.hideStream = false;
+ }
+
+ };
+ });*/
+
+/* app.directive('iframeSetDimentionsOnload', [function () {
+ return {
+ restrict: 'A',
+ link: function ($scope, element, attrs) {
+ element.on('load', function () {
+ $scope.StreamBoxHeight = document.getElementById("streamBox").offsetHeight;
+ console.log($scope.StreamBoxHeight);
+ var iFrameHeight = $scope.StreamBoxHeight + 'px';
+ var iFrameWidth = '100%';
+ element.css('width', iFrameWidth);
+ element.css('height', iFrameHeight);
+ })
+
+ }
+ }
+ }]);*/

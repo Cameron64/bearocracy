@@ -1,32 +1,33 @@
-body, html {
+body,html{
     background-color: #111111;
+    height:100%;
+    margin:0;
+
 }
 
 table {
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    top: 0;
-}
-
-td, tr, th, table, tbody {
-    margin: 0;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    top: 0; border-collapse: separate;
+    border-spacing: 2px 2px;
 }
 
 td {
     border: 1px solid #1561b6;
     z-index: 100;
+    height:50%; margin:1px;
 }
 
-th {
-    border-top: 1px solid #1561b6;
-    z-index: 100;
+iframe{
+    min-height:290px;
+    min-width:200px;
 }
 
 .ng-scope {
-
+    position:relative;
+    height:100%;
     top: 0;
-    height: 89%;
 }
 
 .banners {
@@ -70,5 +71,5 @@ th {
 }
 
 .headerContent {
-    float: left;
+float:right;
 }
