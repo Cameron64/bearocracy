@@ -37,7 +37,7 @@
         }
     });
 
-    app.controller('StreamSubController', ['$scope', '$localStorage', function ($scope, $localStorage) {
+    app.controller('MainController', ['$scope', '$localStorage', function ($scope, $localStorage) {
 
         $scope.$storage = $localStorage.$default({
             chat: 0,

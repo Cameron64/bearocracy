@@ -13,44 +13,46 @@
         swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v20/playerapi.swf",
                 "livestreamPlayer", "100%", "99%", "9.0.0", "expressInstall.swf", flashvars, params);
     </script>
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Bearocracy</title>
 </head>
 <body>
 
-<table ng-app="stream" cellpadding="0" cellspacing="0" ng-controller="StreamSubController">
+<table ng-app="stream" cellpadding="0" cellspacing="0" ng-controller="MainController">
 
-    <tr ng-show="$storage.banner" >
-        <td colspan="2" style="height:3%;">
+    <tr ng-show="$storage.banner">
+        <td colspan="2" class="smallBanner">
+            <div class="smallCenter">
             <sub-toggles></sub-toggles>
+            </div>
         </td>
-
     </tr>
 
     <tr ng-hide="$storage.banner">
-        <td colspan="2" style="height:5%;">
-            <div style=" width:704px;height:120px; margin: 0 auto;">
-            <main-toggles></main-toggles>
+        <td colspan="2" class="smallBanner">
+            <div class="center">
+                <main-toggles></main-toggles>
 
-            <mainbanner></mainbanner>
+                <mainbanner></mainbanner>
+
             </div>
         </td>
-
     </tr>
+
     <tr>
-        <td id="streamBox" ng-controller="StreamSubController"   ng-hide="$storage.stream" style="padding:1px;width:66%;"  >
+        <td id="streamBox" ng-controller="MainController" ng-hide="$storage.stream" style="padding:1px;width:66%;">
 
-            <div  id="livestreamPlayer"></div>
+            <div id="livestreamPlayer"></div>
 
         </td>
-        <td rowspan="2" ng-controller="StreamSubController" ng-hide="$storage.chat" style="width:33%;">
-                <!--chat-->
-                <script id="cid0020000078381685296" data-cfasync="false" async
-                        src="http://st.chatango.com/js/gz/emb.js" style="width:100%; height:95%;min-height:290px;top:0;" >{"handle":"bearocracy","styles":{"a":"000000","b":100,"c":"808080","d":"808080","e":"000000","g":"bbbbbb","h":"202020","i":61,"k":"a0a0a0","p":"12.69","q":"000000","r":100,"t":0,"sbc":"252525","v":0}}</script>
-                <!--end chat-->
+        <td rowspan="2" ng-hide="$storage.chat" style="width:33%;">
+            <!--chat-->
+            <script id="cid0020000078381685296" data-cfasync="false" async
+                    src="http://st.chatango.com/js/gz/emb.js" style="width:100%; height:95%;min-height:290px;top:0;" >{"handle":"bearocracy","styles":{"a":"000000","b":100,"c":"808080","d":"808080","e":"000000","g":"bbbbbb","h":"202020","i":61,"k":"a0a0a0","p":"12.69","q":"000000","r":100,"t":0,"sbc":"252525","v":0}}</script>
+            <!--end chat-->
         </td>
     </tr>
-
 
 </table>
 </body>
