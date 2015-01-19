@@ -45,6 +45,14 @@
             banner: 0
         });
 
+        $scope.player = document.getElementById("livestreamPlayer");
+
+        $scope.switchChannel = function(channelInput) {
+            $scope.player.load(channelInput);
+            $scope.player.setClipID(null);
+            $scope.player.startPlayback();
+        }
+
     }]);
 
 })();

@@ -41,13 +41,13 @@ iframe {
     height: 5%;
 }
 .smallCenter{
-    width:140px;
+    width:145px;
     height:18px;
     margin: 0 auto;
 }
 .center {
-    width: 710px;
-    height: 120px;
+    width: 714px;
+    height: 122px;
     margin: 0 auto;
 }
 
@@ -61,6 +61,8 @@ iframe {
 
 .buttons {
     float: left;
+    margin-right:6px;
+    margin-top:4px;
 }
 
 .toggle {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-controller="MainController">
 <head lang="en">
     <link rel="stylesheet" href="css/Styles.css"/>
 
@@ -8,10 +8,11 @@
     <script src="JS/magic.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
     <script type="text/javascript">
-        flashvars = { channel: 'bearocrats' };
+        flashvars = { channel: "bearocrats" };
         params = { AllowScriptAccess: 'always' };
         swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v20/playerapi.swf",
                 "livestreamPlayer", "100%", "99%", "9.0.0", "expressInstall.swf", flashvars, params);
+
     </script>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -19,7 +20,7 @@
 </head>
 <body>
 
-<table ng-app="stream" cellpadding="0" cellspacing="0" ng-controller="MainController">
+<table ng-app="stream" cellpadding="0" cellspacing="0" >
 
     <tr ng-show="$storage.banner">
         <td colspan="2" class="smallBanner">
@@ -32,8 +33,9 @@
     <tr ng-hide="$storage.banner">
         <td colspan="2" class="smallBanner">
             <div class="center">
+                <div style="margin-right:10px;">
                 <main-toggles></main-toggles>
-
+            </div>
                 <mainbanner></mainbanner>
 
             </div>

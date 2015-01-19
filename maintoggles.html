@@ -1,8 +1,14 @@
-<div class="buttons">
-    <img class="toggle" ng-src="img/hbhead.png"
+<div class="buttons" ng-controller="MainController">
+    <img style="margin-left:4px;" class="toggle" ng-src="img/hbhead.png"
          ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"/> <br>
     <img class="toggle" ng-src="img/stream.png" style="z-index:9004;"
          ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];"/>
     <img class="toggle" ng-src="img/chat.png"  ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"/>
+    <br>
+    <img style="margin-left:14px;" class="toggle" ng-src="img/tron.png"  ng-click="switchChannel('bearocrats')"/>
+    <img class="toggle" style="cursor:auto;" ng-src="img/spacer.png" />
+
+    <img class="toggle" ng-src="img/vidya.png" ng-click="switchChannel('beargaming')" />
+
 
 </div>
