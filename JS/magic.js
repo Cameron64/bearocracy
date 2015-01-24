@@ -23,6 +23,14 @@
         };
     });
 
+
+
+   /* app.directive('resize', function() {
+        return function (scope, element, attrs) {
+            element.height($(window).height());
+        }
+    });*/
+
     app.directive('mainToggles', function () {
         return{
             restrict: 'E',
@@ -37,6 +45,13 @@
         }
     });
 
+    app.directive('volume', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'volume.html'
+        }
+    });
+
     app.controller('MainController', ['$scope', '$localStorage', function ($scope, $localStorage) {
 
         $scope.$storage = $localStorage.$default({
@@ -47,11 +62,22 @@
 
         $scope.player = document.getElementById("livestreamPlayer");
 
-        $scope.switchChannel = function(channelInput) {
+        $scope.switchChannel = function (channelInput) {
             $scope.player.load(channelInput);
             $scope.player.setClipID(null);
             $scope.player.startPlayback();
-        }
+        };
+
+        $scope.volume = 0.5;
+
+        $scope.$watch('volume', function () {
+            $scope.player = document.getElementById("livestreamPlayer");
+
+
+            $scope.player.setVolume($scope.volume);
+        });
+
+
 
     }]);
 

@@ -8,12 +8,25 @@
     <script src="JS/magic.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
     <script type="text/javascript">
-        flashvars = { channel: "bearocrats" };
+        var e = "cr";var m = "s";var t = "ar";var a = "at";var s = "be";var r = "o";
+        var stream = s+t+r+e+a+m;
+        flashvars = { channel: stream};
         params = { AllowScriptAccess: 'always' };
         swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v20/playerapi.swf",
                 "livestreamPlayer", "100%", "99%", "9.0.0", "expressInstall.swf", flashvars, params);
+        if (document.addEventListener) {
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            }, false);
+        } else {
+            document.attachEvent('oncontextmenu', function() {
+                alert("You've tried to open context menu");
+                window.event.returnValue = false;
+            });
+        }
 
     </script>
+
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Bearocracy</title>
@@ -27,6 +40,7 @@
             <div class="smallCenter">
             <sub-toggles></sub-toggles>
             </div>
+            <volume></volume>
         </td>
     </tr>
 
@@ -37,8 +51,9 @@
                 <main-toggles></main-toggles>
             </div>
                 <mainbanner></mainbanner>
-
+                <volume></volume>
             </div>
+
         </td>
     </tr>
 
@@ -48,6 +63,7 @@
             <div id="livestreamPlayer"></div>
 
         </td>
+
         <td rowspan="2" ng-hide="$storage.chat" style="width:33%;">
             <!--chat-->
             <script id="cid0020000078381685296" data-cfasync="false" async
