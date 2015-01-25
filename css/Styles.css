@@ -94,15 +94,19 @@ iframe {
 .invisible{
     opacity:0;
     position:absolute;
-    left:5px;
-    top:3px;
+    right:5px;
+    bottom:10px;
+    cursor:pointer;
+    z-index:900;
 
 }
 
 .invisible:hover{
     opacity:1;
     position:absolute;
-    left:5px;
-    top:3px;
+    right:5px;
+    bottom:10px;
+    cursor:pointer;
+    z-index:900;
 
 }

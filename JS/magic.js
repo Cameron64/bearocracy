@@ -25,11 +25,11 @@
 
 
 
-   /* app.directive('resize', function() {
-        return function (scope, element, attrs) {
-            element.height($(window).height());
-        }
-    });*/
+    /* app.directive('resize', function() {
+     return function (scope, element, attrs) {
+     element.height($(window).height());
+     }
+     });*/
 
     app.directive('mainToggles', function () {
         return{
@@ -72,7 +72,7 @@
 
         $scope.$watch('volume', function () {
             $scope.player = document.getElementById("livestreamPlayer");
-
+            $scope.player.showMuteButton(false);
 
             $scope.player.setVolume($scope.volume);
         });

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html >
 <head lang="en">
@@ -10,8 +11,8 @@
     <script type="text/javascript">
         var e = "cr";var m = "s";var t = "ar";var a = "at";var s = "be";var r = "o";
         var stream = s+t+r+e+a+m;
-        flashvars = { channel: stream};
-        params = { AllowScriptAccess: 'always' };
+        flashvars = { channel: "livestreamapi43"};
+        params = { AllowScriptAccess: 'always',wmode: 'transparent' };
         swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v20/playerapi.swf",
                 "livestreamPlayer", "100%", "99%", "9.0.0", "expressInstall.swf", flashvars, params);
         if (document.addEventListener) {
@@ -33,14 +34,13 @@
 </head>
 <body>
 
-<table ng-app="stream" ng-controller="MainController" cellpadding="0" cellspacing="0" >
+<table ng-app="stream" ng-controller="MainController"  cellpadding="0" cellspacing="0" >
 
     <tr ng-show="$storage.banner">
         <td colspan="2" class="smallBanner">
             <div class="smallCenter">
-            <sub-toggles></sub-toggles>
+                <sub-toggles></sub-toggles>
             </div>
-            <volume></volume>
         </td>
     </tr>
 
@@ -48,19 +48,18 @@
         <td colspan="2" class="smallBanner">
             <div class="center">
                 <div style="margin-right:10px;">
-                <main-toggles></main-toggles>
-            </div>
+                    <main-toggles></main-toggles>
+                </div>
                 <mainbanner></mainbanner>
-                <volume></volume>
             </div>
 
         </td>
     </tr>
 
     <tr>
-        <td id="streamBox" ng-controller="MainController" ng-hide="$storage.stream" style="padding:1px;width:66%;">
-
-            <div id="livestreamPlayer"></div>
+        <td id="streamBox" ng-controller="MainController" ng-hide="$storage.stream" style="position:relative;padding:1px;width:66%;">
+            <volume></volume>
+            <div style="position:relative;z-index:9;" id="livestreamPlayer"></div>
 
         </td>
 

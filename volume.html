@@ -1,4 +1,8 @@
-<div class="invisible">
-    <input type="range"  ng-model="volume"  max="1" min="0" step=".05" style="float:left;" >
-    <div style="color:white;float:left;" >{{volume * 100 | number: 0}}%</div>
+<div class="invisible" ng-hide="$storage.stream">
+
+    <img style="float:left; height:20px;cursor:pointer;" ng-hide="volume==0" ng-click="volume=0.0" ng-src="img/Speaker.png"/>
+    <img style="float:left; height:20px;cursor:pointer;" ng-show="volume == 0" ng-click="volume=0.5" ng-src="img/Speaker_mute.png"/>
+    <input type="range"  ng-model="volume"  max="1" min="0" step=".05" style="float:left;cursor:pointer;" >
+
+
 </div>
