@@ -53,15 +53,20 @@ iframe {
 .stream {
     position: relative;
 }
+.streamBox{
+    position:relative;
+    padding:1px;
+    width:66%;
+}
 
 .chat {
-    position: relative;
+    margin-right:10px;
 }
 
 .buttons {
     float: left;
-    margin-right:6px;
     margin-top:4px;
+    margin-right:10px;
 }
 
 .toggle {
