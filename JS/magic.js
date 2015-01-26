@@ -32,7 +32,7 @@
     app.directive('mainToggles', function () {
         return{
             restrict: 'E',
-            templateUrl: 'maintoggles.html',
+            templateUrl: 'mainToggles.html',
             controller: 'MainController'
         }
     });
