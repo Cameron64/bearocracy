@@ -34,21 +34,33 @@
     app.directive('mainToggles', function () {
         return{
             restrict: 'E',
-            templateUrl: 'mainToggles.html'
+            templateUrl: 'mainToggles.html',
+            controller: 'MainController'
         }
     });
 
     app.directive('subToggles', function () {
         return{
             restrict: 'E',
-            templateUrl: 'subToggles.html'
+            templateUrl: 'subToggles.html',
+            controller: 'MainController'
         }
     });
 
     app.directive('volume', function(){
         return{
             restrict: 'E',
-            templateUrl: 'volume.html'
+            templateUrl: 'volume.html',
+            controller: function($scope){
+                $scope.volume = 0.5;
+
+                $scope.$watch('volume', function () {
+                    $scope.player = document.getElementById("livestreamPlayer");
+                    $scope.player.showMuteButton(false);
+
+                    $scope.player.setVolume($scope.volume);
+                });
+            }
         }
     });
 
@@ -67,17 +79,6 @@
             $scope.player.setClipID(null);
             $scope.player.startPlayback();
         };
-
-        $scope.volume = 0.5;
-
-        $scope.$watch('volume', function () {
-            $scope.player = document.getElementById("livestreamPlayer");
-            $scope.player.showMuteButton(false);
-
-            $scope.player.setVolume($scope.volume);
-        });
-
-
 
     }]);
 
