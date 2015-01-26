@@ -12,7 +12,7 @@
             controller: function ($scope) {
                 $scope.hideBanner = false;
                 $scope.numBanners = 18;
-//              TODO:  dynamically figure out numbBanners
+//              TODO:  dynamically figure out numbBanners (can be done with server side support like PHP and AJAX)
                 $scope.pick = function () {
                     $scope.imgNum = Math.floor(Math.random() * $scope.numBanners) + 1;
                     $scope.banner = "img/banners/bearbanner" + $scope.imgNum + ".jpg"
@@ -22,8 +22,6 @@
             }
         };
     });
-
-
 
     /* app.directive('resize', function() {
      return function (scope, element, attrs) {
