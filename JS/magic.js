@@ -1,6 +1,3 @@
-/**
- * Created by camer_000 on 11/23/2014.
- */
 (function () {
 
     var app = angular.module('stream', ['ngStorage']);
@@ -66,6 +63,10 @@
 
         $scope.channelOne = "bearocrats";
         $scope.channelTwo = "beargaming";
+        $scope.showThumbOne = false;
+        $scope.showThumbTwo = false;
+
+        $scope.thumbNail = "http://thumbnail.api.livestream.com/thumbnail?name=";
 
         $scope.$storage = $localStorage.$default({
             chat: 0,

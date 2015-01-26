@@ -1,6 +1,14 @@
-<div class="subToggles" ng-click="switchChannel(channelOne)">Tron</div>
-        <div class="subToggles">&nbsp;/&nbsp;</div>
-<div class="subToggles" ng-click="switchChannel(channelTwo)" style="margin-right:5px;">Vidya</div>
-<div class="subToggles" id="streamToggle2" ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];">-Video&nbsp; </div>
+<div class="subToggles" ng-click="switchChannel(channelOne)" ng-mouseover="showThumbOne=true;"
+     ng-mouseleave="showThumbOne=false;">Tron
+</div>
+<div class="subToggles">&nbsp;/&nbsp;</div>
+<div class="subToggles" ng-click="switchChannel(channelTwo)" style="margin-right:5px;" ng-mouseover="showThumbTwo=true;"
+     ng-mouseleave="showThumbTwo=false;">Vidya
+</div>
+<img class="subThumb1" ng-src="{{thumbNail + channelOne}}" ng-show="showThumbOne">
+<img class="subThumb2" style="" ng-src="{{thumbNail + channelTwo}}" ng-show="showThumbTwo">
+
+<div class="subToggles" id="streamToggle2" ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];">
+    -Video&nbsp; </div>
 <div class="subToggles" ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"> -Header&nbsp; </div>
-<div class="subToggles"  ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"> -Chat</div>
+<div class="subToggles" ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"> -Chat</div>
