@@ -29,7 +29,7 @@
     app.directive('mainToggles', function () {
         return{
             restrict: 'E',
-            templateUrl: 'mainToggles.html',
+            templateUrl: 'maintoggles.html',
             controller: 'MainController'
         }
     });
