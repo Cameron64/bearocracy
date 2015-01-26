@@ -107,7 +107,7 @@ iframe {
     z-index:900;
 }
 
-.invisible:hover{
+.streamBox:hover .invisible{
     opacity:1;
     position:absolute;
     right:5px;
