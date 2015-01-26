@@ -64,6 +64,9 @@
 
     app.controller('MainController', ['$scope', '$localStorage', function ($scope, $localStorage) {
 
+        $scope.channelOne = "bearocrats";
+        $scope.channelTwo = "beargaming";
+
         $scope.$storage = $localStorage.$default({
             chat: 0,
             stream: 0,
