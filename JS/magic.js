@@ -66,6 +66,7 @@
 
         $scope.channelOne = "bearocrats";
         $scope.channelTwo = "beargaming";
+        $scope.showVolume = false;
 
         $scope.$storage = $localStorage.$default({
             chat: 0,

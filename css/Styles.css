@@ -99,16 +99,6 @@ iframe {
     float: right;
 }
 .invisible{
-    opacity:0;
-    position:absolute;
-    right:5px;
-    bottom:10px;
-    cursor:pointer;
-    z-index:900;
-}
-
-.streamBox:hover .invisible{
-    opacity:1;
     position:absolute;
     right:5px;
     bottom:10px;
