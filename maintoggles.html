@@ -1,11 +1,8 @@
+
 <div class="buttons">
-    <img style="margin-left:4px;" class="toggle" ng-src="img/hbhead.png"
-         ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"/> <br>
-    <img class="toggle" ng-src="img/stream.png" style="z-index:9004;"
-         ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];"/>
-    <img class="toggle" ng-src="img/chat.png" ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"/>
-    <br>
-    <img style="margin-left:14px;" class="toggle" ng-src="img/tron.png" ng-click="switchChannel(channelOne)"/>
-    <img class="toggle" style="cursor:auto;" ng-src="img/spacer.png"/>
-    <img class="toggle" ng-src="img/vidya.png" ng-click="switchChannel(channelTwo)"/>
+    <div class="toggleHeader" ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"></div>
+    <div class="toggleVideo"  ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];"></div>
+    <div class="toggleChat"   ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"></div>
+    <div class="toggleTron"   ng-click="switchChannel(channelOne)">Tron</div>
+    <div class="toggleVidya"  ng-click="switchChannel(channelTwo)">Vidya</div>
 </div>
