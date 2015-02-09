@@ -1,11 +1,8 @@
-/**
- * Created by camer_000 on 11/23/2014.
- */
 (function () {
 
     var app = angular.module('stream', ['ngStorage']);
 
-    app.directive('mainbanner', function () {
+    app.directive('mainbanner', ['$window', function ($window) {
         return{
             restrict: 'E',
             templateUrl: 'slideshow.html',
@@ -18,16 +15,14 @@
                     $scope.banner = "img/banners/bearbanner" + $scope.imgNum + ".jpg"
 
                 };
+                $scope.bearopia = function() {
+                        $window.open('http://www.bearopia.xtreemhost.com', '_blank');
+                };
+
                 $scope.pick();
             }
         };
-    });
-
-    /* app.directive('resize', function() {
-     return function (scope, element, attrs) {
-     element.height($(window).height());
-     }
-     });*/
+    }]);
 
     app.directive('mainToggles', function () {
         return{
