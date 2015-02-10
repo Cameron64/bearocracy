@@ -3,6 +3,6 @@
     <div class="toggleHeader" ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"></div>
     <div class="toggleVideo"  ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];"></div>
     <div class="toggleChat"   ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"></div>
-    <div class="toggleTron"   ng-click="switchChannel(channelOne)">Tron</div>
-    <div class="toggleVidya"  ng-click="switchChannel(channelTwo)">Vidya</div>
+    <div class="toggleTron"   ng-click="switchChannel(channelOne)" ng-mouseover="mainThumb1 = true;"  ng-mouseleave="mainThumb1 = false">Tron</div>
+    <div class="toggleVidya"  ng-click="switchChannel(channelTwo)"  ng-mouseover="mainThumb2 = true;"  ng-mouseleave="mainThumb2 = false">Vidya</div>
 </div>

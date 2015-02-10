@@ -172,3 +172,35 @@ iframe {
     height:20px;
     cursor:pointer;
 }
+.mainThumbClass1{
+    position:absolute;
+    right:347px;
+    top:-10px;
+    width:240px;
+    height:180px;
+    z-index:200;
+}
+.mainThumbClass2{
+    position:absolute;
+    right:292px;
+    top:-10px;
+    width:240px;
+    height:180px;
+    z-index:200;
+}
+.subThumbClass1{
+    position:absolute;
+    right:50px;
+    top:-4px;
+    width:240px;
+    height:180px;
+    z-index:200;
+}
+.subThumbClass2{
+    position:absolute;
+    right:0;
+    top:-4px;
+    width:240px;
+    height:180px;
+    z-index:200;
+}

@@ -57,11 +57,30 @@
         }
     });
 
+    app.directive('mainThumbs', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'mainThumbs.html',
+            controller: 'MainController'
+        }
+    });
+    app.directive('subThumbs', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'subThumbs.html',
+            controller: 'MainController'
+        }
+    });
+
     app.controller('MainController', ['$scope', '$localStorage', function ($scope, $localStorage) {
 
         $scope.channelOne = "bearocrats";
         $scope.channelTwo = "beargaming";
         $scope.showVolume = false;
+        $scope.mainThumb1 = false;
+        $scope.mainThumb2 = false;
+        $scope.subThumb1 = false;
+        $scope.subThumb2 = false;
 
         $scope.$storage = $localStorage.$default({
             chat: 0,
@@ -75,6 +94,14 @@
             $scope.player.load(channelInput);
             $scope.player.setClipID(null);
             $scope.player.startPlayback();
+        };
+
+
+        $scope.getURL = function(channel){
+
+            return 'http://thumbnail.api.livestream.com/thumbnail?name=' + channel + '&t='
+                + new Date().valueOf();
+
         };
 
     }]);

@@ -3,7 +3,7 @@
 <div class="subToggles"  ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"> -Chat</div>
         <br>
         <div style="left:30px;position:relative;">
-<div class="subToggles" style="left:25px;" ng-click="switchChannel(channelOne)">Tron</div>
+<div class="subToggles" style="left:25px;" ng-click="switchChannel(channelOne)" ng-mouseover="subThumb1 = true;"  ng-mouseleave="subThumb1 = false">Tron</div>
 <div class="subToggles" style="cursor:default;">&nbsp;|&nbsp;</div>
-<div class="subToggles" ng-click="switchChannel(channelTwo)" style="margin-right:5px;">Vidya</div>
+<div class="subToggles" ng-click="switchChannel(channelTwo)" style="margin-right:5px;" ng-mouseover="subThumb2 = true;"  ng-mouseleave="subThumb2 = false">Vidya</div>
         </div>
