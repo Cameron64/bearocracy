@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="stream">
 <head lang="en">
     <link rel="stylesheet" href="css/Styles.css"/>
 
@@ -17,11 +17,6 @@
             document.addEventListener('contextmenu', function (e) {
                 e.preventDefault();
             }, false);
-        } else {
-            document.attachEvent('oncontextmenu', function () {
-                alert("You've tried to open context menu");
-                window.event.returnValue = false;
-            });
         }
 
     </script>
@@ -32,7 +27,7 @@
 </head>
 <body ng-controller="MainController" >
 
-<table ng-app="stream" cellpadding="0" cellspacing="0">
+<table cellpadding="0" cellspacing="0">
 
     <tr ng-show="$storage.banner">
         <td colspan="2" class="smallBanner">
