@@ -172,35 +172,27 @@ iframe {
     height:20px;
     cursor:pointer;
 }
-.mainThumbClass1{
+.mainThumbClass1,.mainThumbClass2,.subThumbClass1,.subThumbClass2{
     position:absolute;
-    right:347px;
-    top:-10px;
-    width:240px;
-    height:180px;
     z-index:200;
+    height:180px;
+    width:240px;
+    border: 5px solid #1561b6;
+    border-radius: 5px;
+}
+.mainThumbClass1{
+    right:474px;
+    top:-10px;
 }
 .mainThumbClass2{
-    position:absolute;
-    right:292px;
+    right:430px;
     top:-10px;
-    width:240px;
-    height:180px;
-    z-index:200;
 }
 .subThumbClass1{
-    position:absolute;
-    right:50px;
+    right:183px;
     top:-4px;
-    width:240px;
-    height:180px;
-    z-index:200;
 }
 .subThumbClass2{
-    position:absolute;
-    right:0;
+    right:138px;
     top:-4px;
-    width:240px;
-    height:180px;
-    z-index:200;
 }
