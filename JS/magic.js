@@ -72,7 +72,7 @@
         }
     });
 
-    app.controller('MainController', ['$scope', '$localStorage', function ($scope, $localStorage) {
+    app.controller('MainController', ['$scope', '$localStorage','$interval', function ($scope, $localStorage, $interval) {
 
         $scope.channelOne = "bearocrats";
         $scope.channelTwo = "beargaming";
@@ -81,6 +81,10 @@
         $scope.mainThumb2 = false;
         $scope.subThumb1 = false;
         $scope.subThumb2 = false;
+        var thumbPrefix = 'http://thumbnail.api.livestream.com/thumbnail?name=';
+        $scope.channelOneThumb = thumbPrefix + $scope.channelOne;
+        $scope.channelTwoThumb = thumbPrefix + $scope.channelTwo;
+
 
         $scope.$storage = $localStorage.$default({
             chat: 0,
@@ -96,13 +100,12 @@
             $scope.player.startPlayback();
         };
 
-
-        $scope.getURL = function(channel){
-
-            return 'http://thumbnail.api.livestream.com/thumbnail?name=' + channel + '&t='
+        $interval(function(){
+            $scope.channelOneThumb = thumbPrefix + $scope.channelOne + '&t='
                 + new Date().valueOf();
-
-        };
+            $scope.channelTwoThumb = thumbPrefix + $scope.channelTwo + '&t='
+                + new Date().valueOf();
+        },10000)
 
     }]);
 
