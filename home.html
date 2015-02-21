@@ -11,6 +11,11 @@
         var e = "cr"; var m = "s";var t = "ar";var a = "at";var s = "be";var r = "o";var stream = s + t + r + e + a + m;
         flashvars = { channel: stream};
         params = { AllowScriptAccess: 'always', wmode: 'transparent' };
+        function livestreamPlayerCallback(event) {
+            if (event == 'ready') {
+                player = document.getElementById("livestreamPlayer");
+                player.showMuteButton(false);
+            }}
         swfobject.embedSWF("http://cdn.livestream.com/chromelessPlayer/v20/playerapi.swf",
                 "livestreamPlayer", "100%", "99%", "9.0.0", "expressInstall.swf", flashvars, params);
         if (document.addEventListener) {

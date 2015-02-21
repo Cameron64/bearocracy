@@ -48,9 +48,8 @@
                 $scope.volume = 0.5;
 
                 $scope.$watch('volume', function () {
-                    $scope.player = document.getElementById("livestreamPlayer");
-                    $scope.player.showMuteButton(false);
 
+                    $scope.player = document.getElementById("livestreamPlayer");
                     $scope.player.setVolume($scope.volume);
                 });
             }
