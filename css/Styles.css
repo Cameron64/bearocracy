@@ -197,3 +197,14 @@ iframe {
     right:138px;
     top:-4px;
 }
+
+/*begin holidays*/
+#my_canvas{
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+#status{
+    position:absolute;
+    display:none;
+}
