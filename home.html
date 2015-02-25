@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="stream">
+<html>
 <head lang="en">
     <link rel="stylesheet" href="css/Styles.css"/>
+
+
 
     <script src="JS/angular.min.js"></script>
     <script src="JS/ngStorage.min.js"></script>
     <script src="JS/magic.js"></script>
+    <script src="JS/holidays.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
     <script type="text/javascript">
         var e = "cr"; var m = "s";var t = "ar";var a = "at";var s = "be";var r = "o";var stream = s + t + r + e + a + m;
@@ -30,9 +33,9 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Bearocracy</title>
 </head>
-<body ng-controller="MainController" >
+<body   >
 
-<table cellpadding="0" cellspacing="0">
+<table ng-app="stream" ng-controller="MainController" cellpadding="0" cellspacing="0" style="z-index:25;position:absolute;">
 
     <tr>
         <td ng-hide="$storage.banner" colspan="2" class="smallBanner">
@@ -65,5 +68,10 @@
     </tr>
 
 </table>
+<div ng-app="hollidays">
+    <snow></snow>
+
+</div>
+
 </body>
 </html>
