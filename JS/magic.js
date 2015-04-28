@@ -71,7 +71,7 @@
         }
     });
 
-    app.controller('MainController', ['$scope', '$localStorage','$interval', function ($scope, $localStorage, $interval) {
+    app.controller('MainController', ['$scope', '$localStorage','$interval', function ($scope, $localStorage) {
 
         $scope.channelOne = "bearocrats";
         $scope.channelTwo = "beargaming";
@@ -99,12 +99,10 @@
             $scope.player.startPlayback();
         };
 
-        $interval(function(){
-            $scope.channelOneThumb = thumbPrefix + $scope.channelOne + '&t='
+        $scope.getThumb = function(channel){
+            $scope.channelOneThumb = thumbPrefix + channel + '&t='
                 + new Date().valueOf();
-            $scope.channelTwoThumb = thumbPrefix + $scope.channelTwo + '&t='
-                + new Date().valueOf();
-        },10000)
+        };
 
     }]);
 
