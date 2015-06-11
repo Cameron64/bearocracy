@@ -1,4 +1,4 @@
-angular.module('stream').controller('banner', ['$scope', function ($scope) {
+angular.module('stream').controller('banner', ['$scope','$window', function ($scope,$window) {
     $scope.hideBanner = false;
     $scope.numBanners = 18;
 //              TODO:  dynamically figure out numbBanners (can be done with server side support like PHP and AJAX)

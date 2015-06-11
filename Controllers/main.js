@@ -1,4 +1,4 @@
-angular.module('stream').controller('main', ['$scope', '$localStorage','$interval', function ($scope, $localStorage) {
+angular.module('stream').controller('main', ['$scope', '$localStorage', function ($scope, $localStorage) {
     $scope.channelOne = "bearocrats";
     $scope.channelTwo = "beargaming";
     $scope.showVolume = false;
