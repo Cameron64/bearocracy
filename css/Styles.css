@@ -100,13 +100,28 @@ iframe {
 .headerContent {
     float: right;
 }
-.invisible{
-    position:absolute;
-    right:5px;
-    bottom:10px;
-    cursor:pointer;
-    z-index:900;
+.invisible {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 900;
 }
+.shader{
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    position: absolute;
+    background: black;
+    top: 0;
+    pointer-events: none;
+}
+
+.shaderInput{
+    right: -20px;
+    position: relative;
+}
+
 .buttons {
     width: 110px;
     height: 101px;

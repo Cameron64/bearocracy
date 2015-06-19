@@ -34,6 +34,14 @@
         }
     }).
 
+        directive('shader', function(){
+            return{
+                restrict: 'E',
+                templateUrl: 'Directives/shader.html',
+                controller: 'shaderCon'
+            }
+        }).
+
     directive('mainThumbs', function(){
         return{
             restrict: 'E',

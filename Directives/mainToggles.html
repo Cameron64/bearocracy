@@ -1,9 +1,9 @@
 
 <div class="buttons">
-    <div class="toggleHeader" ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"></div>
-    <div class="toggleVideo"  ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];"></div>
-    <div class="toggleChat"   ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"></div>
-    <div class="toggleTron"   ng-click="switchChannel(channelOne)" ng-mouseover="mainThumb1 = true;getThumb(channelOne);"  ng-mouseleave="mainThumb1 = false">Tron</div>
-    <div class="toggleVidya"  ng-click="switchChannel(channelTwo)"  ng-mouseover="mainThumb2 = true;getThumb(channelTwo);"  ng-mouseleave="mainThumb2 = false">Vidya</div>
+    <div class="toggleHeader" title="Toggle banner" ng-click="$storage.banner={1 : 0 , 0 : 1}[$storage.banner];"></div>
+    <div class="toggleVideo" title="Toggle video" ng-click="$storage.stream={1 : 0 , 0 : 1}[$storage.stream];"></div>
+    <div class="toggleChat" title="Toggle chat"  ng-click="$storage.chat={1 : 0 , 0 : 1}[$storage.chat];"></div>
+    <div class="toggleTron" title="Change channel"  ng-click="switchChannel(channelOne)" ng-mouseover="mainThumb1 = true;getThumb(channelOne);"  ng-mouseleave="mainThumb1 = false">Tron</div>
+    <div class="toggleVidya" title="Change channel" ng-click="switchChannel(channelTwo)"  ng-mouseover="mainThumb2 = true;getThumb(channelTwo);"  ng-mouseleave="mainThumb2 = false">Vidya</div>
     <main-thumbs></main-thumbs>
 </div>
