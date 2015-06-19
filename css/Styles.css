@@ -1,3 +1,23 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
 body, html {
     background-color: #111111;
     height: 100%;
@@ -106,6 +126,8 @@ iframe {
     bottom: 10px;
     cursor: pointer;
     z-index: 900;
+    width: 150px;
+    float: right;
 }
 .shader{
     width: 100%;
@@ -118,8 +140,9 @@ iframe {
 }
 
 .shaderInput{
-    right: -20px;
     position: relative;
+    width: 100px;
+    float: right;
 }
 
 .buttons {
@@ -184,9 +207,9 @@ iframe {
     cursor:pointer;
 }
 .speaker{
-    float:left;
-    height:20px;
-    cursor:pointer;
+    height: 20px;
+    cursor: pointer;
+    float: right;
 }
 .mainThumbClass1,.mainThumbClass2,.subThumbClass1,.subThumbClass2{
     position:absolute;

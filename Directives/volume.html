@@ -1,10 +1,10 @@
 <div class="shader" ng-style="{'opacity': shade}"></div>
 
-<div class="invisible" ng-show="showVolume" style="width:153px;">
+<div class="invisible" ng-show="showVolume" >
 
     <input class="shaderInput" title="Darken/Brighten Video" type="range"  data-ng-model="shade" ng-init="shade=0" max="1" min="0" step=".05">
 
-    <input  type="range"  ng-model="volume"  max="1" min="0" step=".05">
+    <input style="width:100px;float:right;"  type="range"  ng-model="volume"  max="1" min="0" step=".05">
 
 
     <img class="speaker" ng-hide="volume==0" ng-click="volume=0.0" ng-src="img/Speaker.png"/>
